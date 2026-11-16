@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abay Alie - Personal Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header Section with Profile Photo -->
+    <header class="main-header">
+       <div class="profile-container">
+    <img style="border-radius: 50%;" src="nile.jpg" alt="Nile Photo" class="profile-img">
+</div>
+        <h1>Welcome to my first website for us - Abay Alie Website</h1>
+        <p>Computer Science Student & Software Developer</p>
+    </header>
+    <!-- Navigation Bar (Under Header with Hover Effects) -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#skills">My Skill</a></li>
+            <li><a href="#history">My History</a></li>
+            <li><a href="#database">Information Database</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <!-- About Me Section -->
+        <section id="about" class="card">
+            <h2>About Me</h2>
+            <p>ሰላም! እኔ <strong>አባይ አሌ (Abay Alie)</strong> እባላለሁ። በደባርቅ ዩኒቨርሲቲ የ4ኛ ዓመት የኮምፒውተር ሳይንስ (Computer Science) ተማሪ ነኝ። ቴክኖሎጂን በመጠቀም የማህበረሰቡን ችግሮች የሚፈቱ ሶፍትዌሮችን እና ድረ-ገጾችን መስራት ያስደስተኛል።</p>
+        </section>
+
+        <!-- My Skill Section -->
+        <section id="skills" class="card">
+            <h2>My Skill</h2>
+            <div class="skills-grid">
+                <div class="skill-item">HTML5 & CSS3</div>
+                <div class="skill-item">JavaScript (ES6+)</div>
+                <div class="skill-item">PHP & MySQL</div>
+                <div class="skill-item">C++ & Java</div>
+                <div class="skill-item">Networking & Hardware</div>
+                <div class="skill-item">Flutter & Android</div>
+            </div>
+        </section>
+
+        <!-- My History Section -->
+        <section id="history" class="card">
+            <h2>My History</h2>
+            <ul class="history-list">
+                <li><strong>ትምህርት:</strong> በደባርቅ ዩኒቨርሲቲ የኮምፒውተር ሳይንስ የመጀመሪያ ዲግሪ ተማሪ (4ኛ ዓመት)።</li>
+                <li><strong>የስራ ልምምድ (Internship):</strong> በደባርቅ ዩኒቨርሲቲ በኔትወርኪንግ፣ በሰርቨር አስተዳደር እና በኮምፒውተር ጥገና ላይ የተሳካ ልምምድ አድርጌያለሁ።</li>
+                <li><strong>ፕሮጀክቶች:</strong> የትምህርት ቤት ማስተዳደሪያ ሲስተም እና የግቢ ውስጥ ደህንነት መቆጣጠሪያ ፕሮጀክቶችን ሰርቻለሁ።</li>
+            </ul>
+        </section>
+
+        <!-- Database Section (Table with Add/Delete functionality) -->
+        <section id="database" class="card">
+            <h2>My Information & Project Database</h2>
+            <p>እዚህ ጋር አዲስ መረጃ ወይም ፕሮጀክት በመጨመር በሰንጠረዥ (Table) ውስጥ ማስቀመጥ ይችላሉ፦</p>
+            
+            <form id="dbForm" class="db-form">
+                <input type="text" id="infoTitle" placeholder="ርዕስ (ለምሳሌ: Project Name)" required>
+                <input type="text" id="infoCategory" placeholder="ምድብ (ለምሳሌ: Web / Network)" required>
+                <input type="text" id="infoDetail" placeholder="ዝርዝር መግለጫ" required>
+                <button type="submit">Add to Table</button>
+            </form>
+
+            <div class="table-responsive">
+                <table id="infoTable">
+                    <thead>
+                        <tr>
+                            <th>ተ.ቁ (ID)</th>
+                            <th>ርዕስ (Title)</th>
+                            <th>ምድብ (Category)</th>
+                            <th>ዝርዝር መግለጫ (Description)</th>
+                            <th>ድርጊት (Action)</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tableBody">
+                        <!-- Data will be loaded here by JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Contact Us Section -->
+        <section id="contact" class="card">
+            <h2>Contact Us</h2>
+            <p>በቀጥታ መልዕክት ለመላክ ከታች ያለውን ቅጽ ይሙሉ፦</p>
+            <form id="contactForm" class="contact-form">
+                <input type="text" id="senderName" placeholder="ሙሉ ስምዎ" required>
+                <input type="email" id="senderEmail" placeholder="ኢሜይልዎ" required>
+                <textarea id="senderMessage" rows="4" placeholder="መልዕክትዎን እዚህ ይጻፉ..." required></textarea>
+                <button type="submit">መልዕክት ላክ (Send Message)</button>
+            </form>
+            <p id="contactStatus" class="status-msg"></p>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Abay Alie. All Rights Reserved. | Hosted on GitHub Pages</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

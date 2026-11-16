@@ -1,0 +1,247 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #f0f4f8;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header Styling */
+.main-header {
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: #ffffff;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.main-header h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+}
+
+.main-header p {
+    font-size: 1.1rem;
+    color: #a8dadc;
+}
+
+/* Navigation Bar with Hover Effects */
+.navbar {
+    background-color: #1d3557;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    flex-wrap: wrap;
+}
+
+.navbar ul li {
+    margin: 0;
+}
+
+.navbar ul li a {
+    display: block;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 15px 25px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+/* Hover Effect on Menu Items */
+.navbar ul li a:hover {
+    background-color: #457b9d;
+    color: #f1faee;
+    transform: translateY(-2px);
+}
+
+.navbar ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    background-color: #00f5d4;
+    transition: width 0.3s ease;
+}
+
+.navbar ul li a:hover::after {
+    width: 100%;
+}
+
+/* Main Content Container */
+.container {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+.card {
+    background: #ffffff;
+    padding: 25px 30px;
+    margin-bottom: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+}
+
+.card h2 {
+    color: #1d3557;
+    border-bottom: 2px solid #457b9d;
+    padding-bottom: 8px;
+    margin-bottom: 15px;
+}
+
+/* Skills Grid */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.skill-item {
+    background: #e6f2ff;
+    color: #1d3557;
+    padding: 12px;
+    text-align: center;
+    border-radius: 6px;
+    font-weight: bold;
+    border: 1px solid #bde0fe;
+    transition: 0.3s;
+}
+
+.skill-item:hover {
+    background: #1d3557;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* History List */
+.history-list {
+    margin-left: 20px;
+}
+
+.history-list li {
+    margin-bottom: 10px;
+}
+
+/* Database Form & Table Styling */
+.db-form {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin: 15px 0;
+}
+
+.db-form input {
+    flex: 1;
+    min-width: 180px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.db-form button, .contact-form button {
+    background-color: #2a9d8f;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.db-form button:hover, .contact-form button:hover {
+    background-color: #21867a;
+}
+
+.table-responsive {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+table th, table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+table th {
+    background-color: #1d3557;
+    color: white;
+}
+
+/* Table Row Hover Effect */
+table tbody tr:hover {
+    background-color: #e0fbfc;
+    transition: background 0.2s ease;
+}
+
+.delete-btn {
+    background-color: #e63946;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.delete-btn:hover {
+    background-color: #c1121f;
+}
+
+/* Contact Form */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 15px;
+}
+
+.contact-form input, .contact-form textarea {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.status-msg {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #2a9d8f;
+}
+
+/* Footer */
+footer {
+    background-color: #1d3557;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
